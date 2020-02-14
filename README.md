@@ -1,1 +1,2 @@
-# Prog1
+# Programozási nyelvek 1
+
