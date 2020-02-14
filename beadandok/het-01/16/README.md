@@ -7,6 +7,7 @@ A kiíratás után adj neki kezdőértéket és írasd ki megint.
 Mindkét kiíratás külön sorba kerüljön.
 A változónevet/azonosítót tetszőlegesen válaszd meg.
 
+
 ##### példa kimenet (eltérő lehet):
 ```
 43267312
