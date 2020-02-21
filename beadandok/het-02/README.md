@@ -14,12 +14,10 @@ legkisebbet.
 ```
 ---
 
-## 2. feladat
-
+## 2. feladat 
 Írj egy programot, ami beolvas három pozitív egész számot (a, b, oszto), 
 majd kiírja azoknak a számoknak az összegét, amelyek 'a'-tól 'b'-ig  oszthatóak 'oszto'-val.
 Az intervallumba 'a' és 'b' is beletartozik.
----
 
 ##### példa bemenet 1:
 ```
