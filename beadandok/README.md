@@ -1,7 +1,7 @@
 # Beadandók / házi feladatok
 
 Minden hét házi feladata külön mappába kerül, ezeken belül pedig 
-minden feladat megoldandó mindkét csoportnak, hacsak máshogy nem jelzem adott feladatnál.
+minden feladat megoldandó mindkét csoportnak, hacsak nincs két külön mappa a két csoportnak, vagy máshogy nem jelzem adott feladatnál.
 
 
 ### Beadás
