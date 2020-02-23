@@ -117,7 +117,7 @@ Az EOF karakter Windowson `CTRL+Z`, Linuxon `CTRL+D`.
 
 
 ## 4. feladat
-Írj egy programot, ami addig kér be NEMNEGATÍV egész számokat a bemenetről, 
+Írj egy programot, ami addig kér be nemnegatív egész számokat a bemenetről, 
 amíg egymás után kétszer ugyan azt a számot nem kapja. A végén írja ki
 a beolvasott számok összegét (az utolsó 2 egyező számból csak az egyiket adjuk hozzá).
 
