@@ -132,7 +132,7 @@ a beolvasott számok összegét (az utolsó 2 egyező számból csak az egyiket 
 ```
 ##### példa kimenet 1:
 ```
-15
+14
 ```
 
 ##### magyarázat:
