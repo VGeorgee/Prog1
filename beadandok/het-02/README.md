@@ -1,5 +1,7 @@
 # 2. Beadandó
 
+### Ne küldj be olyan megoldást, ami a példakimenetek bármelyikére nem egyezik pontosan! A sorok végén elvárt a sortörés is.
+
 ## 1. feladat
 Írj egy programot, ami beolvas három egész számot, és kiírja a képernyőre a három szám közül a
 legkisebbet.
@@ -54,7 +56,7 @@ Az intervallumba 'a' és 'b' is beletartozik.
 
 ## 3. feladat
 
-Írj egy programot, ami EOF-ig kér be számokat a bemenetről, majd kiírja a beolvasott
+Írj egy programot, ami EOF-ig kér be EGÉSZ számokat a bemenetről, majd kiírja a beolvasott
 számok átlagát 3 tizedes pontossággal.
 Az EOF karakter Windowson `CTRL+Z`, Linuxon `CTRL+D`.
 
@@ -115,13 +117,13 @@ Az EOF karakter Windowson `CTRL+Z`, Linuxon `CTRL+D`.
 
 
 ## 4. feladat
-Írj egy programot, ami addig kér be nemnegatív számokat a bemenetről, 
+Írj egy programot, ami addig kér be NEMNEGATÍV egész számokat a bemenetről, 
 amíg egymás után kétszer ugyan azt a számot nem kapja. A végén írja ki
 a beolvasott számok összegét (az utolsó 2 egyező számból csak az egyiket adjuk hozzá).
 
 ##### példa bemenet 1:
 ```
-1
+0
 2
 3
 4
