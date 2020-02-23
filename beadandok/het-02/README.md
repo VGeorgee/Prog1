@@ -138,7 +138,7 @@ a beolvasott számok összegét (az utolsó 2 egyező számból csak az egyiket 
 ##### magyarázat:
 
 ```
-1 + 2 + 3 + 4 + 5 = 15
+0 + 2 + 3 + 4 + 5 = 14
 ```
 
 ---
