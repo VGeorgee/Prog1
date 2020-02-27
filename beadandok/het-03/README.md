@@ -85,9 +85,8 @@ Az utópisztikus fa minden évben 2 növekedési cikluson megy át. Minden tavas
 Laura a tavasz kezdetén ülteti el az utópisztikus fáját 1 méteres magassággal.
 Mekkora lesz a fa `n` növekedési ciklus után?
 
-vegyünk egy példát `n = 5`-re
+##### vegyünk egy példát `n = 5`-re:
 
-##### példa:
 ```
 ciklus  magasság
 0          1
