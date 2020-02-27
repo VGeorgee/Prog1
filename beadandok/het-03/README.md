@@ -83,7 +83,7 @@ minden háromszög egy n*n-es négyzetet fog alkotni, így
 Az utópisztikus fa minden évben 2 növekedési cikluson megy át. Minden tavasszal a kétszeresére nő, minden nyáron 1 méterrel nő.
 
 Laura a tavasz kezdetén ülteti el az utópisztikus fáját 1 méteres magassággal.
-Mekkora a fa `n` növekedési ciklus után?
+Mekkora lesz a fa `n` növekedési ciklus után?
 
 vegyünk egy példát `n = 5`-re
 
