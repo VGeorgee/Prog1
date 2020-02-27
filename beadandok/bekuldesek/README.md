@@ -59,4 +59,4 @@ WBZRHR
 ##Eddigi
 | Azonosító | Scratch | 1.het | 2.het | 3.het | 4.het | 5.het | 6.het |
 | --------  | :-----: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ZFWQSW    |   [x]   |  [ ]  |  [ ]  |  [x]  |  [x]  |  [x]  |  [x]  |
+| ZFWQSW    | - [x]   | - []  | - [ ] | - [x] | - [x] | - [x] | - [x] |
