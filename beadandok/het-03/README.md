@@ -4,6 +4,8 @@
 
 ### Az alábbi feladatoknál elég csak a függvényeket mellékelni.
 
+### Beküldés előtt olvassuk el a [2-3 heti órai anyagot](https://github.com/VGeorgee/Prog1/tree/master/orai-anyag/2-3.%20het) ÉS a programkódokkal kapcsolatos [szabályokat](https://github.com/VGeorgee/Prog1/tree/master/szabalyok)
+
 ## 1. feladat
 A mellékelt program számokat kér be addig, amíg 0-t nem kap, a megkapott számokkal meghívja a `stairs` függvényt.
 Ezt a függvényt módosítsd úgy, hogy a példának megfelelő háromszöget rajzolja a kimenetre.
