@@ -7,8 +7,7 @@
 ## 1. feladat
 A mellékelt program számokat kér be addig, amíg 0-t nem kap, a megkapott számokkal meghívja a `stairs` függvényt.
 Ezt a függvényt módosítsd úgy, hogy a példának megfelelő háromszöget rajzolja a kimenetre.
-A `main` függvényét ne módosítsd!
-
+A `main` függvényét ne módosítsd! A kimenet ' ' (space) és ' * ' (csillag) karakterekből álljon (" " és "*" paraméter a printf-nek)
 ##### main.c:
 ```
 
@@ -60,7 +59,7 @@ int main(){
 ```
 
 ##### magyarázat:
-minden háromszög egy n*n-es négyzetet fog alkotni, így 
+minden háromszög egy n*n-es négyzetet fog alkotni, melynek (ha szükséges) a csillagai  " " (space) karakterekkel vannak kiigazítva a jobb oldalra.
 
 1: `*`
 
@@ -68,12 +67,15 @@ minden háromszög egy n*n-es négyzetet fog alkotni, így
 ```
 **
  *
+^ 1 space
 ```
 3:
 ```
 ***
  **
   *
+^^
+^ 3 space
 ```
 
 ---
