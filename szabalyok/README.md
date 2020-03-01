@@ -32,7 +32,7 @@ int main(){
 
 C-ben minden azonosítót csupa kisbetűvel írunk és olyan azonosítókat használunk, amely tükrözi, hogy mire szeretnénk
 felhasználni az adott függvényt, vagy változót. Ha egy azonosító több szóból állna, akkor az egyes szavakat
-alsóvonallal `_` választjuk el egymástól. Ékezetes karaktereket NE használjunk!
+alsó vonallal `_` választjuk el egymástól. Ékezetes karaktereket NE használjunk!
 
 ```
 
