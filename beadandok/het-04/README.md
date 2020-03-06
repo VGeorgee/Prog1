@@ -110,7 +110,7 @@ int birthday_cake_candles(int arr[], int array_length) {
 
 int main(){
     int gyertyak[4] = { 3, 2, 1, 3};
-    printf("%d\n", birthday_cake_candles(gyertyak));
+    printf("%d\n", birthday_cake_candles(gyertyak, 4));
     return 0;
 }
 ```
