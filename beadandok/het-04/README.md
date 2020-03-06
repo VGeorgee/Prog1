@@ -2,7 +2,7 @@
 
 ### Ne küldj be olyan megoldást, ami a példakimenetek bármelyikére nem egyezik pontosan! A sorok végén elvárt a sortörés is. Ügyeljünk a programkód indentálására is!
 
-### Megoldás előtt olvassuk el a [4. heti órai anyagot](https://github.com/VGeorgee/Prog1/tree/master/orai-anyag/2-3.%20het) 
+### Megoldás előtt olvassuk el a [4. heti órai anyagot](https://github.com/VGeorgee/Prog1/tree/master/orai-anyag/4.%20het) 
 
 ## 1. feladat
 Írd meg a `simple_array_sum` függvényt, amely megkap egy tömböt és annak méretét, majd
