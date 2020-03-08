@@ -111,6 +111,8 @@ int birthday_cake_candles(int arr[], int array_length) {
 int main(){
     int gyertyak[4] = { 3, 2, 1, 3};
     printf("%d\n", birthday_cake_candles(gyertyak, 4));
+    int gyertyak2[4] = { 1, 2, 3, 4};
+    printf("%d\n", birthday_cake_candles(gyertyak2, 4));
     return 0;
 }
 ```
@@ -118,10 +120,12 @@ int main(){
 ##### példa kimenet:
 ```
 2
+1
 ```
 
 ##### magyarázat:
 ```
 3 a legmagasabb gyertya, ebből 2 van a tortán, így kettőt tud elfújni
+4 a legmagasabb gyertya, ebből 1 van a tortán, így egyet tud elfújni
 ```
 
