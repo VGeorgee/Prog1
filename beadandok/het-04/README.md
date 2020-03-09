@@ -113,6 +113,10 @@ int main(){
     printf("%d\n", birthday_cake_candles(gyertyak, 4));
     int gyertyak2[4] = { 1, 2, 3, 4};
     printf("%d\n", birthday_cake_candles(gyertyak2, 4));
+    int gyertyak3[4] = { 1, 1, 1, 4};
+    printf("%d\n", birthday_cake_candles(gyertyak3, 4));
+    int gyertyak4[8] = { 1, 2, 2, 3, 3, 4, 3, 4};
+    printf("%d\n", birthday_cake_candles(gyertyak4, 8));
     return 0;
 }
 ```
@@ -121,11 +125,15 @@ int main(){
 ```
 2
 1
+1
+2
 ```
 
 ##### magyarázat:
 ```
 3 a legmagasabb gyertya, ebből 2 van a tortán, így kettőt tud elfújni
 4 a legmagasabb gyertya, ebből 1 van a tortán, így egyet tud elfújni
+4 a legmagasabb gyertya, ebből 1 van a tortán, így egyet tud elfújni
+4 a legmagasabb gyertya, ebből 2 van a tortán, így kettőt tud elfújni
 ```
 
