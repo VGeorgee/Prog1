@@ -78,6 +78,8 @@ void mini_max_sum(int arr[]) {
 int main(){
     int a[5] = { 1, 2, 3, 4, 5};
     mini_max_sum(a);
+    int b[5] = { 5, 5, 5, 5, 5};
+    mini_max_sum(b);
     return 0;
 }
 ```
@@ -85,6 +87,7 @@ int main(){
 ##### példa kimenet:
 ```
 10 14
+20 20
 ```
 
 ##### magyarázat:
@@ -92,6 +95,9 @@ int main(){
 1 2 3 4 5 számok összege: 15
 1 + 2 + 3 + 4 = 10  //az 5öt hagytuk ki -> legkisebb részösszeg
 2 + 3 + 4 + 5 = 14  //az 1-et hagytuk ki -> legnagyobb részösszeg
+5 5 5 5 5 számok összege: 25
+5 + 5 + 5 + 5 = 20  //az 5öt hagytuk ki -> legkisebb részösszeg
+5 + 5 + 5 + 5 = 30  //megint... -> legnagyobb részösszeg
 ```
 
 
