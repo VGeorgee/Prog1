@@ -45,7 +45,7 @@ int main(){
 	initialize_my_array_with_zeros(uninitialized, n);
 
 
-	double tort[200] = { 0.0 };
+	double fraction[200] = { 0.0 };
 	//vigyázzunk a tömbök méretére, akármekkorát nem kérhetünk:
 	// int nem_foglalhato_le[10000000000];
 }
