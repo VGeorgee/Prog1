@@ -2,6 +2,8 @@
 
 ### Ne küldj be olyan megoldást, ami a példakimenetek bármelyikére nem egyezik pontosan! A sorok végén elvárt a sortörés is. Ügyeljünk a programkód indentálására is!
 
+### A feladatok `main` függvényét ne módosítsátok!
+
 ### Megoldás előtt olvassuk el az [5. heti órai anyagot](https://github.com/VGeorgee/Prog1/tree/master/orai-anyag/5.%20het) 
 
 ## 1. feladat
@@ -124,7 +126,7 @@ int main(){
 #include <string.h>
 
 int string_length(char s[]) {
-
+    //ide dolgozz
 }
 
 int main(){
@@ -157,7 +159,7 @@ példa:
 #include <string.h>
 
 void strrev(char s[]) {
-
+    //ide dolgozz
 }
 
 int main(){
@@ -198,7 +200,7 @@ az eljárás módosítsa `s`-ben `co` összes előfordulását `cr`-re. Ha `co` 
 #include <string.h>
 
 void replace_all(char *s, char co, char cr){
-
+    //ide dolgozz
 }
 
 int main(){
