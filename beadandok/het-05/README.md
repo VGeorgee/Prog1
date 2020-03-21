@@ -152,6 +152,8 @@ int main(){
 Írjon egy eljárást, ami megkap egy sztringet, és megfordítja azt.
 példa:
     s = "hello" ->  s = "olleh"
+   
+A függvény nem írhat ki semmit.
 
 ```
 #include <stdio.h>
@@ -192,14 +194,14 @@ fedcba
 ## 6. feladat
 Írjon egy függvényt, ami megkap egy sztringet (`s`), és két karaktert (`co`, `cr`)
 az eljárás módosítsa `s`-ben `co` összes előfordulását `cr`-re. Ha `co` nem található meg a tömbben, ne történjen módosítás.
-
+A függvény nem írhat ki semmit.
 
 ```
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-void replace_all(char *s, char co, char cr){
+void replace_all(char []s, char co, char cr){
     //ide dolgozz
 }
 
