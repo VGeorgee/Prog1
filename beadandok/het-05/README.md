@@ -160,7 +160,7 @@ A függvény nem írhat ki semmit.
 #include <stdlib.h>
 #include <string.h>
 
-void strrev(char s[]) {
+void reverse(char s[]) {
     //ide dolgozz
 }
 
@@ -170,10 +170,10 @@ int main(){
     char s3[] = "aBbA";
     char s4[] = "abcdef";
     
-    strrev(s1);
-    strrev(s2);
-    strrev(s3);
-    strrev(s4);    
+    reverse(s1);
+    reverse(s2);
+    reverse(s3);
+    reverse(s4);    
 
     printf("%s\n", s1);
     printf("%s\n", s2);

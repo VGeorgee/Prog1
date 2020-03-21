@@ -4,7 +4,7 @@
 
 ### Változók
 
- létrehozása:` type id;`
+ létrehozása: `type id;`
 
  ```
     int number; 
@@ -39,7 +39,7 @@ a nevükre(id) hivatkozva tehetjük meg.
 
 ### Függvények
 
- létrehozása:` type id(FPL){};`
+ létrehozása: `type id(FPL){};`
 
  A változó definíció kiegészítése kerek zárójellel, opcionálisan formális paraméter listával és egy kapcsoszárójel-párral.
  A formális paraméter lista az átadandó paramétereket jelzi, a kapcsoszárójel-pár pedig a függvényhez tartozó viselkedést 
@@ -60,7 +60,7 @@ a get_a_number függvény nem rendelkezik paraméterrel.
 
 ### Tömbök
 
- létrehozás:` type id[size];`
+ létrehozás: `type id[size];`
 
  A változó létrehozásának kiegészítése szögletes zárójelpárral és a közé írt értékkel.
  
@@ -113,12 +113,12 @@ létrehozás után viszont a mérete fix marad, nem tudjuk megváltoztatni:
 
 ##### kezdőértékadás:
 ```
-     int array[7] = {1,3,4,65}; //7 méretű tömb, 1, 3, 4, 65, 0, 0, 0 értékekkel
-     int array[] = {10, 5, 0}; // 3 méretű tömb 10, 5, 0 értékekkel
-     int array[n] = {10, 4, 0}; // nem fordítható, változóval megadott tömbméret esetén nem adhatok kezdőértéket
-     int array[n]; //ezek után egyesével hivatkozva az elemeket kell inicializálnom a tömböt (pl for ciklus)
+     int array1[7] = {1,3,4,65}; //7 méretű tömb, 1, 3, 4, 65, 0, 0, 0 értékekkel
+     int array2[] = {10, 5, 0}; // 3 méretű tömb 10, 5, 0 értékekkel
+     int array3[n] = {10, 4, 0}; // nem fordítható, változóval megadott tömbméret esetén nem adhatok kezdőértéket
+     int array4[n]; //ezek után egyesével hivatkozva az elemeket kell inicializálnom a tömböt (pl for ciklus)
      for(int i =  0; i < n; i++){
-         array[i] = 0;
+         array4[i] = 0;
      }
 ```
 
@@ -312,13 +312,13 @@ hanem azt is, hogy egymáshoz képest a két sztring milyen viszonyban van:
     printf("%d\n", strcmp(s1, s2)); // 0, hiszen a 2 sztring megegyezik
     char s3[] = "abb"; // abb != abc-vel, így a függvény nem 0-t fog visszaadni.
 
-    printf("%d\n", strcmp(s1, s3)); // 1, mert s1 nagyobb, mint s3
-    printf("%d\n", strcmp(s3, s1)); // -1, mert s3 kisebb, mint s1
+    printf("%d\n", strcmp(s1, s3)); // pozitiv, mert s1 nagyobb, mint s3
+    printf("%d\n", strcmp(s3, s1)); // negativ, mert s3 kisebb, mint s1
 
     char s4[] = "d";
 
-    printf("%d\n", strcmp(s1, s4)); // -1, mert s1 kisebb, mint s4
-    printf("%d\n", strcmp(s4, s1)); // 1, mert s4 nagyobb, mint s1
+    printf("%d\n", strcmp(s1, s4)); // negativ, mert s1 kisebb, mint s4
+    printf("%d\n", strcmp(s4, s1)); // pozitiv, mert s4 nagyobb, mint s1
 ```
 
  Az egyezés magától értetődő, de hogyan értelmezzük a kisebbet, vagy nagyobbat?
