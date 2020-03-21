@@ -201,7 +201,7 @@ A függvény nem írhat ki semmit.
 #include <stdlib.h>
 #include <string.h>
 
-void replace_all(char []s, char co, char cr){
+void replace_all(char s[], char co, char cr){
     //ide dolgozz
 }
 
