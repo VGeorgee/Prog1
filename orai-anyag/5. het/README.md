@@ -170,7 +170,7 @@ A karakterekre nem tértünk ki eddig lényegesen. Amit tudunk róla:
     printf("Hello!");
          //^^^^^^^^
     printf("%d", 15);
-         // ^^^^
+         //^^^^
     char my_first_string[100]; // nem inicializált karakterekből álló tömb, random értékekkel
      
     char my_second_string[100] = {'H', 'E', 'L', 'L', 'O', '\0'}; 
@@ -202,7 +202,7 @@ köszönjünk a felhasználónak:
 ```
 
 Mint azt már említettem, ezeknek a tömböknek meg tudjuk mondani a hosszát (vagyis a hasznos adat tartalmát),
-erre két megoldás van, az egyik a `<string.h>` headerben deklarált `strlen(char[])` függvény.
+erre két megoldás van, az egyik a `<string.h>` headerben deklarált `int strlen(char[])` függvény.
 ##### használata:
 ```
     int len = strlen("HELLO");
@@ -242,8 +242,13 @@ az `strlen()` függvény ugyan ezt csinálja.
 mivel a sztringek karakterekből álló tömbök, ezért módosítani tudjuk az egyes elemeket:
 ```
     char string4[100] = "a b c d e f g hello2";
-    puts(string4); //printf("%s\n", string4); egyszerűsített változata, csak a sztringet kell átadni, és magától tesz sortörést
-    string4[1] = 'b'; //a második (space) karakter módosítása b-re. b értékadáskor nem "" között, hanem '' között szerepel, karakter!
+    puts(string4); 
+    // a puts(s) a printf("%s\n", s); egyszerűsített változata,
+    // csak a sztringet kell átadni és magától tesz sortörést
+    
+    string4[1] = 'b'; 
+    // a második karakter (space) módosítása b-re. 
+    // b értékadáskor nem "" között, hanem '' között szerepel, hiszen karakter!
     puts(string4) // abb c d e f g hello2
 ```
 
@@ -253,7 +258,8 @@ Ha le akarunk másolni egy sztringet, ezt az `strcpy` (_string copy_) függvénn
 a `cél` és a `forrás`, forrást fogja célba másolni.
 ```    
     char s1[100] = "Hello";
-    char s2[] = "World"; // nem adok értéket a tömbnek (így "World" hosszú lesz)
+    char s2[ ] = "World"; 
+    //      ^ nem adok értéket a tömbnek (így "World" hosszú lesz, (5 + 1))
     puts(s1); // Hello
     puts(s2); // World
     
@@ -262,6 +268,7 @@ a `cél` és a `forrás`, forrást fogja célba másolni.
     puts(s2); // World
 ```
 
+##### Figyeljünk oda arra, hogy a cél tömb legalább strlen(forrás) + 1 méretű legyen!
 
 
 #### Konkatenáció:
@@ -281,7 +288,7 @@ erre szolgál az `strcat` (_string concat_), melynek két sztring paramétere va
     puts(s1); // Hello World
     puts(s2); // World
 ```
-
+##### Figyeljünk oda arra, hogy a cél tömb legalább strlen(cél) + strlen(forrás) + 1 méretű legyen!
 
 #### egyezés vizsgálata:
 ha egészeket akarunk összehasonlítani, ott vannak az operátorok (`<`, `>`, `<=`, `>=`, `==`, `!=`),
