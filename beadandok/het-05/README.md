@@ -1,3 +1,6 @@
+### A kurzussal kapcsolatos tájékoztatás az [elearningen](elearning.unideb.hu)  található meg, a 14 órás csoportnak INBMM0211L-05, a 16 órás csoportnak pedig INBMM0211L-08 kurzus alatt.
+
+
 # 5. Beadandó
 
 ### Ne küldj be olyan megoldást, ami a példakimenetek bármelyikére nem egyezik pontosan! A sorok végén elvárt a sortörés is. Ügyeljünk a programkód indentálására is!
