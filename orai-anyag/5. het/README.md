@@ -1,6 +1,6 @@
 
 
-### A kurzussal kapcsolatos tájékoztatás az [elearningen](elearning.unideb.hu)  található meg, a 14 órás csoportnak INBMM0211L-05, a 16 órás csoportnak pedig INBMM0211L-08 kurzus alatt.
+### A kurzussal kapcsolatos tájékoztatás az [elearningen](https://elearning.unideb.hu)  található meg, a 14 órás csoportnak INBMM0211L-05, a 16 órás csoportnak pedig INBMM0211L-08 kurzus alatt.
 
 
 
