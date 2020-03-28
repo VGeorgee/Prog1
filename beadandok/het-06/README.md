@@ -69,7 +69,6 @@ abcd
 hello
 printf
 aaaaaaaaaaaaxaaaaaaaaaa
-()
 ```
 
 
@@ -79,7 +78,6 @@ d
 o
 t
 x
-)
 ```
 
 #### hint
@@ -251,7 +249,6 @@ aBcD
 HeLLo
 PRINTf
 aaaaaaaaAAaaxXaaaaAaaaaa
-()
 ```
 
 ##### példa kimenet:
@@ -260,7 +257,6 @@ d
 o
 t
 x
-)
 ```
 
 
