@@ -2,7 +2,7 @@
 
 # 6. Beadandó
 
-### Megoldás előtt olvassuk el az [6. heti órai anyagot](https://github.com/VGeorgee/Prog1/tree/master/orai-anyag/6.%20het) 
+### Megoldás előtt olvassuk el az [6. heti órai anyagot](https://github.com/VGeorgee/Prog1/tree/master/orai-anyag/6.%20het), Az unatkozóknak a végén van egy projekt is, amit nem akarok itt külön feltüntetni
 
 ### 7 feladat lesz, kérlek titeket, hogy 1 fájlban küldjétek el az egészet, a `mainek` nélkül
 
