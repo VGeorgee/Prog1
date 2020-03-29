@@ -60,7 +60,6 @@ a `foo`-t, csak kommenteljétek ki a `maint` és a `#include "myheader.h"`-t bek
 Írj egy programot, ami EOF-ig kér be kisbetűs szavakat a bemenetről.
 A program minden szóról állapítsa meg, hogy mely
  karaktere van a leghátrább az ABC-ben.
-Ennek megállapítására külön függvényt írjunk.
 
 
 ##### példa bemenet:
