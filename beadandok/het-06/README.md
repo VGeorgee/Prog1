@@ -33,6 +33,7 @@ int main(){
     printf("%d\n", number_of_valid_T("."));
     printf("%d\n", number_of_valid_T("T"));
     printf("%d\n", number_of_valid_T(".T."));
+    printf("%d\n", number_of_valid_T(".TT."));
     printf("%d\n", number_of_valid_T(".T"));
     return 0;
 }
