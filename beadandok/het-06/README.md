@@ -47,6 +47,7 @@ int main(){
 0
 1
 0
+0
 ```
 
 Advanced embereknek [ajánlom](https://progcont.hu/progcont/100226/?pid=201123) ezt a feladatot.
@@ -57,7 +58,8 @@ a `foo`-t, csak kommenteljétek ki a `maint` és a `#include "myheader.h"`-t bek
 
 ## 2. feladat 
 
-Írj egy programot, ami EOF-ig kér be kisbetűs szavakat a bemenetről.
+Írj egy programot, ami EOF-ig kér be kisbetűs szavakat a bemenetről (nem kap meg nem
+kisbetűs karaktereket, ne foglalkozzunk a kezelésükkel).
 A program minden szóról állapítsa meg, hogy mely
  karaktere van a leghátrább az ABC-ben.
 
@@ -92,6 +94,9 @@ a bekért adatok egyeznek a definiált felhasználónévvel és jelszóval,
 akkor a bejelentkezés sikeres, egyéb esetben sikertelen
 (mint egy szokásos bejelentkezés esetében).
 
+A bekért és a beégetett adatok összehasonlítását `strcmp` függvénnyel végezzük, 
+erre találták ki.
+
 A felhasználó ötször próbálkozhat egy futtatásban bejelentkezni, ha ötödjére is 
 helytelen adatokat ad meg, a program írja ki, hogy `Sikertelen bejelentkezés!`, majd lépjen ki.
 Ha a felhasználónak sikerült a bejelentkezés, akkor írja ki a program, hogy `sikeres bejelentkezés!`.
@@ -109,9 +114,13 @@ int main()
 {
     char valid_username[] = "username";
     char valid_password[] = "password";
+
     //ide dolgozz
 
 
+
+    //ez csak akkor jelenjen meg, ha a bejelentkezes sikeres volt
+    puts("a program tovabbi futasa sikeres bejelentkezes eseten");
     return 0;
 }
 ```
@@ -151,6 +160,7 @@ password:asd
 username:username
 password:password
 sikeres bejelentkezes!
+a program tovabbi futasa sikeres bejelentkezes eseten
 ```
 
 ---
@@ -265,3 +275,13 @@ x
 A függvény pontosan ugyan azt csinálja, mint az `strcat`.
 ügyeljünk a lezárásra, és hogy teszteléskor megfelelő méretű tömböket használjunk!
 (céltömb strlen(cél) + strlen(forrás) + 1 méretű kell, hogy legyen legalább!)
+A függvény nem írhat ki semmit.
+
+```
+int main(){
+    char elso[100] = "conca";
+    char masodik[] = "tenated";
+    strconcat(elso, masodik);
+    printf("|concatenated|====|%s|\n", elso); 
+}
+```
