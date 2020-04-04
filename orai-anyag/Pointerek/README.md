@@ -129,7 +129,7 @@ műveletet jelent és az általa tárolt címem tárolt értéket
  }
  ```
 
-Mivel a pointerek is változók, nekük is van címük, rájuk 
+Mivel a pointerek is változók, nekik is van címük, rájuk 
 is tudjuk alkalmazni a címképző operátort:
 
 ```
@@ -179,11 +179,13 @@ int main(){
 }
 ```
 
+A pointerek minden olyan változóhoz (memóriaterülethez) hozzáférnek,
+amit a saját programunk foglalt le.
+
 ## NULL
 
 Pointerek esetén szokás használni a NULL-t, ezt értékül tudjuk adni egy pointernek,
-jelezve például, hogy a változónk nincs inicializálva. (Prog 2-eseknek
-rémlik a NullPointerException?)
+jelezve például, hogy a változónk nincs inicializálva.
 
 ```
 #include <stdlib.h>
@@ -194,6 +196,16 @@ int main(){
 ```
 
 A NULL értéke megegyezik a 0 egésszel, vagy a '\0' karakterrel, típusa azonban cím.
+
+Sajnos ehhez a címhez (a 0. memóriacím) sincs hozzáférésünk:
+```
+int main()
+{
+    int *pn = NULL;
+    printf("%d\n", *pn);
+}
+```
+Prog 2-es embereknek rémlik a NullPointerException?
 
 ## Többszörös indirekció
 
