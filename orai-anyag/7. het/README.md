@@ -1,10 +1,5 @@
 
 
-### A kurzussal kapcsolatos tájékoztatás az [elearningen](https://elearning.unideb.hu)  található meg, a 14 órás csoportnak INBMM0211L-05, a 16 órás csoportnak pedig INBMM0211L-08 kurzus alatt.
-
-
-
-
 # házifeladat megoldások
 
 ### Nézzük meg, értelmezzük őket és tanuljunk belőle!
@@ -25,12 +20,12 @@ A tipikus és egyszerű megoldás megfog 3 egymás melletti karaktert
  
 ` s[i - 1] == '.' &&  s[i] == 'T' && s[i + 1] == '.'`
 
-ebben az esetben => `i = 1`-től kellett indítani, és `i < length - 1` -ig menni
+ebben az esetben  `i = 1`-től kellett indítani, és `i < length - 1` -ig menni
 
 
 ` s[i] == '.' &&  s[i + 1] == 'T' && s[i + 2] == '.'`
 
-ebben az esetben pedig=> `i = 0`-tól kellett indítani, és `i < length - 2` -ig menni
+ebben az esetben pedig  `i = 0`-tól kellett indítani, és `i < length - 2` -ig menni
 
 ```
 int number_of_valid_T(char s[]){
@@ -52,7 +47,7 @@ Ebben a feladatban szavakat kellett EOF-ig bekérni,
 majd kiírni, hogy mely karakterük van a leghátrább az ABC-ben.
 
 Mivel a C a karaktereket is számként kezeli (a karakterkódot tároljuk),
-így ez a feladat egy sima maximumkiválasztást igényel, karakterek közül.
+így ez a feladat egy sima maximum kiválasztást igényel, karakterek közül.
 
 ##### 1
 A legolcsóbb megoldás, hogy a kiválasztást nem szervezzük ki függvénybe,
@@ -116,7 +111,7 @@ int get_max(char s[]){
     return max;
 }
 ```
-képzeletbeli plusz pont annak, aki megfejti
+képzeletbeli plusz pont annak, aki megfejti,
 és valós minusz pont annak, aki ilyen megoldást küld be valamelyik feladatára.
 
 
@@ -273,16 +268,16 @@ Ez a megoldás pedig kifejezetten tetszett, mert egyszerűbb
  irányból közelíti meg a problémát, így ciklus nélkül, beépített
 függvénnyel oldja azt meg.
 
-A lényege, hogy beleerőltetjük egyetlen sztringmásoló függvényhívásba
+A lényege, hogy beleerőltetjük egyetlen sztringmásoló függvény hívásába
  a megoldást.
  
-3 esetünk van n és a sztring mérete kapcsán:
-   - n kisebb mint 0, ekkor semmit nem sem csinálunk (vagy magával írjuk felül a sztringet)
-   - n 0 és sztringméret közé esik, ekkor n karaktert akarok előremozgatni (vagyis az n-edik karakternél kezdődő részsztringgel akarom felülírni az eredetit)
-   - n nagyobb, mint a sztringméret, ekkor pedig a 0. elemet üres karakterre állítom (vagy a sztringem 0 méretű részsztringjét másolom előre)
+3 esetünk van `n` és a `sztring mérete` kapcsán:
+   - `n` kisebb mint `0,` ekkor semmit nem sem csinálunk (vagy magával írjuk felül a sztringet)
+   - `n` `0` és `sztringméret` közé esik, ekkor `n` darab karaktert akarok előremozgatni (vagyis az n-edik karakternél kezdődő részsztringgel akarom felülírni az eredetit)
+   - `n` nagyobb, mint a `sztringméret`, ekkor pedig a 0. elemet üres karakterre állítom (vagy a sztringem 0 méretű részsztringjét másolom előre)
    
-  emiatt pedig csupán n-et kell megváltoztatnom, ha ez szükséges, ezt 2 if-el megtehetem,
-  majd az strcpynek átadom s-t, és s n-edik karakterének címét (`&s[n]`)
+  emiatt pedig csupán `n`-et kell megváltoztatnom, ha ez szükséges, ezt 2 if-el megtehetem,
+  majd az `strcpy`nek átadom s-t, és s n-edik karakterének címét (`&s[n]`)
   (ez az `s` n-edik karakterétől kezdődő részsztringet jelenti)
 ```
 void string_remove(char s[], int n) {
@@ -328,8 +323,8 @@ int get_max_insensitive(char s[]){
 ### 7. feladat
 Itt az `strcat` függvényt kellett megírni `strconcat` néven,
 nem kellett ellenőriznie semmit, csak tenni a dolgát:
-  - megkeresni A paraméter legutolsó (lezáró) karakterét
-  - innen elkezdeni rámásolni a B paramétert
+  - megkeresni `A` paraméter legutolsó (lezáró) karakterét
+  - innen elkezdeni rámásolni a `B` paramétert
   
 az `strcat` függvényt nem használhattad a feladat megoldásához.
 
@@ -352,7 +347,8 @@ void strconcat(char a[], char b[])
 ```
 
 ##### 2
-Ugyan az a téma mint az előbb, de egyszerűsítsük a léptetést.
+Ugyan az a téma mint az előbb, de egyszerűsítsük A sztring
+lezáró karakterének a keresését.
 ```
 void strconcat(char a[], char b[])
 {
@@ -394,6 +390,18 @@ void strconcat(char a[], char b[])
 ```
 
 ##### 5
+Az előző megoldást átírhatjuk egy while-lá, az inkrementáló operátorokat
+pedig bemozgathatjuk a másolásba:
+
+```
+void strconcat(char a[], char b[])
+{
+    int ai = strlen(a), bi = 0;
+    while(a[ai++] = b[bi++]);
+}
+```
+
+##### 6
 ahogy a feladat legelején írtam, az `strcat` függvényt nem használhattad a feladat megoldásához,
 de mást igen:
 ```
@@ -403,9 +411,9 @@ void strconcat(char a[], char b[])
 }
 ```
 
-##### 6
+##### 7
 ez a megoldás pedig a mostani anyag feldolgozása után lehet érdekes,
-erősen kötődik a 4-es megoldáshoz, csak pointerekkel:
+erősen kötődik a 5-ös megoldáshoz, csak pointerekkel:
 ```
 void strconcat(char *a, char *b)
 {
