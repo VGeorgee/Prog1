@@ -214,12 +214,14 @@ Ahogyan fentebb említettem, a pointer típusú deklaráció így néz ki:
 `tipus *nev;`
 
 ahol magának `nev`-nek a típusa pointer  `*`,
-viszont ebben az esetben ez azt jelenti, hogy `tipus` mindig lehet csillag (`*`) is:
+viszont ez azt is jelenti, hogy `tipus` mindig lehet csillag (`*`) is,
+és mindig elé kell írnom, hogy mire mutat:
 
 `tipus **nev;`
 
-Ez mit is jelent? hogy nev erteke egy cim, ami egy olyan valtozora mutat,
-ami pointer, aminek az értéke megintcsak cím, ami egy int-re mutat.
+Ez mit is jelent? hogy `nev` egy `pointer`, aminek az értéke egy cím, 
+ami egy olyan valtozora mutat,
+ami `pointer`, aminek az értéke megintcsak cím, ami egy `tipus`-ra mutat.
 
 Álljon is itt egy sokszor előkerülő példa:
 
