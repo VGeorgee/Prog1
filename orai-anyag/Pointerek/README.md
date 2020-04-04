@@ -23,7 +23,7 @@ Felsoroltam az alap típusokat (`int`, `char`, `double` ...) elmondtam egy pár 
  "pointert" tartalmaz, csak a nyelv magától kezeli, hogy a címmel, vagy az 
  ott tárolt értékkel akarsz dolgozni.
 
- ### Pointer típus
+ ## Pointer típus
  
  A pointer egy speciális típus, az `egész` bővített változata, azonban ők nem
  sima egész számok (0, 12, 47831, -400), hanem címek tárolására vannak kitalálva,
@@ -37,7 +37,7 @@ viszont a `mutatás` művelet miatt a programunk inicializálatlan
 változó esetén biztosan hibára fog futni, ez egy nagyon gyakori hiba
 C-ben.
  
- #### Deklaráció
+ ## Deklaráció
  
  az alap változó deklarációra emlékszik mindenki:
  
@@ -73,7 +73,7 @@ int *pn;
 ```
  
  
- #### Tulajdonságok
+ ## Tulajdonságok
  
   Azt ugye már tudjuk az [ismétlésből](https://github.com/VGeorgee/Prog1/tree/master/orai-anyag/5.%20het#v%C3%A1ltoz%C3%B3k),
   hogy egy alap típusú változó tárol valamilyen `értéket`, valamint rendelkezik `címmel`
@@ -111,10 +111,11 @@ műveletet jelent és az általa tárolt címem tárolt értéket
  kérjük le (sikertelenül).
  
  
- #### Használat
+ ## Használat
  
  Na de hogyan is használjuk helyesen?
- Adjunk neki olyan értéket, amihez van hozzáférésünk, például egy változó
+ Adjunk neki olyan értéket, amihez van hozzáférésünk, például egy, 
+  a programunk által létrehozott, változó
  címét. Mivel kérhetjük le a változó címét? a címképző operátorral:
   ```
  int main(){
@@ -178,11 +179,11 @@ int main(){
 }
 ```
 
-#### NULL
+## NULL
 
 Pointerek esetén szokás használni a NULL-t, ezt értékül tudjuk adni egy pointernek,
 jelezve például, hogy a változónk nincs inicializálva. (Prog 2-eseknek
-rémlik a nullPointerException?)
+rémlik a NullPointerException?)
 
 ```
 #include <stdlib.h>
@@ -192,9 +193,9 @@ int main(){
 }
 ```
 
-A NULL megegyezik a 0 egésszel, vagy a '\0' karakterrel, típusa azonban cím.
+A NULL értéke megegyezik a 0 egésszel, vagy a '\0' karakterrel, típusa azonban cím.
 
-#### Többszörös indirekció
+## Többszörös indirekció
 
 Ahogyan fentebb említettem, a pointer típusú deklaráció így néz ki:
 
@@ -235,7 +236,7 @@ int main(){
 
 Ezt persze nem fogjuk túlzásba vinni.
 
-#### Tömbök
+## Tömbök
 
 Tömböknél is pointereket használtunk, hiszen ahogyan azt már megbeszéltük korábban,
 a tömbök nevei a tömbök első elemének a címét tárolják.
@@ -326,7 +327,7 @@ int main(){
 }
 ```
 
-#### Mutatók függvények visszatérési típusakét
+## Mutatók függvények visszatérési típusakét
 
 függvények természetesen adhatnak vissza mutatókat is, ilyenkor
 is a függvény visszatérési típusát cseréljük ki mutató típusra.
