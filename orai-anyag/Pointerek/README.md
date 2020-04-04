@@ -313,7 +313,7 @@ erre álljon is itt az `strcpy` függvény egy nagyon tömör implementációja:
 #include <stdio.h>
 #include <stdlib.h>
 
-strcpy (char *s, char *t){
+void strcpy (char *s, char *t){
     while (*s++ = *t++);
 }
 
@@ -331,7 +331,7 @@ int main(){
 függvények természetesen adhatnak vissza mutatókat is, ilyenkor
 is a függvény visszatérési típusát cseréljük ki mutató típusra.
 Pointer típusú függvényeknél kifejezetten érdemes megjegyezni a NULL-t,
-hiszen általában ezzel jelezzük, ha nem sikerült teljesítenünk a feladatot.
+hiszen általában ezzel jelezzük a kivételeket.
 ```
 int *get_pointer_of_first_zero(int *arr, int n){
     int i;

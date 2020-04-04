@@ -3,7 +3,7 @@
 
 ### Megoldás előtt olvassuk el az [7. heti órai anyagot](https://github.com/VGeorgee/Prog1/tree/master/orai-anyag/7.%20het)
 
-### [Házi feladatok kiváltása](https://github.com/VGeorgee/XWS/tree/master/docs/prog1)
+### [Házi feladatok kiváltása](https://github.com/VGeorgee/Prog1/tree/master/beadandok/Projekt)
 
 ## 1. feladat
 Egészítsd ki az `increment` függvényt, ami megkapja egy `int` típusú változó

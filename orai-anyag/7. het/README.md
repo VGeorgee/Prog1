@@ -413,7 +413,7 @@ void strconcat(char a[], char b[])
 
 ##### 7
 ez a megoldás pedig a mostani anyag feldolgozása után lehet érdekes,
-erősen kötődik a 5-ös megoldáshoz, csak pointerekkel:
+erősen kötődik az 5-ös megoldáshoz, csak pointerekkel:
 ```
 void strconcat(char *a, char *b)
 {
@@ -431,7 +431,7 @@ void strconcat(char *a, char *b)
 Ahhoz, hogy matematikai függvényeket használjunk, be kell húznunk a math.h headert:
 `#include <math.h>`
 
-Akik nem CLionben fordítanak, azoknak fordításkor hozzá kell adniuk a `-lm` kapcsolót:
+Akik nem valamilyen IDE-ben fordítanak, azoknak fordításkor hozzá kell adniuk a `-lm` kapcsolót:
 
 `gcc pelda.c -o pelda -lm`
 
