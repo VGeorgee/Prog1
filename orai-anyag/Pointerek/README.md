@@ -201,8 +201,8 @@ Ahogyan fentebb említettem, a pointer típusú deklaráció így néz ki:
 
 `tipus *nev;`
 
-ahol magának nev-nek a típusa a csillag `*`,
-viszont ebben az esetben ez azt jelenti, hogy tipus mindig lehet csillag is:
+ahol magának `nev`-nek a típusa pointer  `*`,
+viszont ebben az esetben ez azt jelenti, hogy `tipus` mindig lehet csillag (`*`) is:
 
 `tipus **nev;`
 
