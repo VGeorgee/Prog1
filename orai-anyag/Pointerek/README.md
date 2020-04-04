@@ -248,7 +248,7 @@ A tömbnevek értékei nem változtathatóak meg:
     array = &n; //forditasi hiba
 ```
 
-Azonban a tömbök kezdőcímeit ugyanúgy tudjuk tárolni pointerekben:
+Azonban a tömbök kezdőcímeit tudjuk tárolni pointerekben:
 
 ```
     int array[100] = { 0 };
@@ -256,7 +256,8 @@ Azonban a tömbök kezdőcímeit ugyanúgy tudjuk tárolni pointerekben:
     parr = array; //nem kell cimkepzo, hiszen array magatol is cimet jelent
 ```
 
-viszont innentől `array`-re mutatunk, és annak értékeit írjuk felül:
+viszont innentől `parr`-ral `array`-re mutatunk, és rajta keresztül
+annak értékeit írjuk felül:
 ```
     int array[100] = { 0 };
     int *parr;
@@ -285,8 +286,8 @@ viszont innentől `array`-re mutatunk, és annak értékeit írjuk felül:
 függvényeknek való paraméterátadáskor is pointer típust hoztunk létre
 tömbök esetén, viszont a `[]` kifejezőbb a `*`-nál, hiszen
 tudjuk, hogy tömbről van szó az előbbinél, míg az utóbbinál lehetséges,
-hogy csak egyetlen számról van szó és nem számok tömbjéről.
-(azonban semmi sem tiltja, hogy ne tömbként kezeljük)
+hogy csak egyetlen adatról van szó, és nem azok tömbjéről.
+(azonban az operációs rendszeren kívül semmi sem tiltja, hogy ne tömbként kezeljük)
 
 ```
 int sum(int a[]){ //a egy mutato intek tombjere
