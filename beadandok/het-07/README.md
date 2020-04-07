@@ -104,9 +104,9 @@ ffgfgfgfgffggfgff
 ##### példa kimenet:
 ```
 a
-(a, b, vagy c)
+(a, b, c közül valamelyik)
 c
-(g, b vagy r)
+(g, b, r közül valamelyik)
 f
 ```
 
