@@ -74,7 +74,7 @@ int main() {
 
 ## 3. feladat
 
-Írj egy függvényt, ami megkap egy angol kisbetűkből sztringet, és visszaadja a benne
+Írj egy függvényt, ami megkap egy angol kisbetűkből álló sztringet, és visszaadja a benne
 legsűrűbben előforduló karaktert. Bármilyen célra vezető megoldás jó.
 
 ```
@@ -258,10 +258,10 @@ provogravam
 
 [Ennek](https://progcont.hu/progcont/100185/?pid=200992) a feladatnak a megoldása.
 
+A progcont nem tesztel, így ne várjuk meg az eredményt a beküldéssel.
+
 Ha progconton küldünk be feladatot, ügyeljünk rá,
  hogy a program semmilyen plusz szöveget 
 nem írhat a kimenetre, valamint hogy ne sima ANSI C-ben küldjük be 
 (ez az alap beállítás),
 hanem `ANSI C '99`-ben.
-
-(A progcont nem tesztel, ne várjunk az eredményre.)
