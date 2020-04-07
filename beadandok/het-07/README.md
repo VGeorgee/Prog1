@@ -99,6 +99,7 @@ abc
 acc
 ggbbrr
 ffgfgfgfgffggfgff
+asddsasdaadssad
 ```
 
 ##### példa kimenet:
@@ -108,6 +109,7 @@ a
 c
 (g, b, r közül valamelyik)
 f
+(a, s, d közül valamelyik)
 ```
 
 ##### hint:
