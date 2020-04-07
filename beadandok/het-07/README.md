@@ -258,9 +258,10 @@ provogravam
 
 [Ennek](https://progcont.hu/progcont/100185/?pid=200992) a feladatnak a megoldása.
 
-Ügyeljünk rá, hogy a program semmilyen plusz szöveget 
-nem írhat a kimenetre, valamint hogy ne sima ANSI C-ben küldjük be (ez az alap beállítás),
+Ha progconton küldünk be feladatot, ügyeljünk rá,
+ hogy a program semmilyen plusz szöveget 
+nem írhat a kimenetre, valamint hogy ne sima ANSI C-ben küldjük be 
+(ez az alap beállítás),
 hanem `ANSI C '99`-ben.
 
-Nekem nem tesztelte le, így valószínüleg most üzemen kívül van a progcont,
-de azért próbáljuk meg beküldeni.
+(A progcont nem tesztel, ne várjunk az eredményre.)
