@@ -305,11 +305,29 @@ int replace_all_ctr(char *s, char co, char cr){
 ```
 
 ### 6. feladat
+Ebben a feladatban a függvénynek át kellett alakítania a sztringet madárnyelvre,
+ehhez nem feltétlen volt szükség tömbre, dolgozhattunk egyből a kimenetre is:
 
+#### 1
+```
+#include <ctype.h>
+
+void madarnyelv(const char *s){
+    int i;
+    for(i = 0; i < strlen(s); i++){
+        printf("%c", s[i]);
+        int character = tolower(s[i]);
+        if(character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u'){
+            printf("v%c", character);
+        }
+    }
+    puts("");
+}
+```
 
 
 ### 7. feladat
-Ez egy sima maximumkiválasztás volt, minden egyes sor bemenetre:
+Ez egy sima maximum kiválasztás volt, minden egyes sor bemenetre:
 
 #### 1
 ```
