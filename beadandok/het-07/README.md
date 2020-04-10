@@ -1,5 +1,5 @@
 
-# 6. Beadandó
+# 7. Beadandó
 
 ### Megoldás előtt olvassuk el az [7. heti órai anyagot](https://github.com/VGeorgee/Prog1/tree/master/orai-anyag/7.%20het)
 
