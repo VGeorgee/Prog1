@@ -8,7 +8,7 @@ nem változtathatja meg.
 
 ##### main.c:
 ```
-int get_distinct_count(const char *, const char *){
+int get_distinct_count(const char *a, const char *b){
 
 }
 
