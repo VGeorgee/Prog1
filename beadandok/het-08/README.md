@@ -2,13 +2,13 @@
 # 8. Beadandó
 
 ## 1. feladat
-Egészítsd ki a `get_distinct_count` függvényt. A függvény adja vissza, hogy a két
+Egészítsd ki a `get_equal_count` függvényt. A függvény adja vissza, hogy a két
 sztringben hány darab azonos karakter van. A függvény az átadott paramétereket
 nem változtathatja meg.
 
 ##### main.c:
 ```
-int get_distinct_count(const char *a, const char *b){
+int get_equal_count(const char *a, const char *b){
 
 }
 
