@@ -14,7 +14,7 @@ int get_equal_count(const char *a, const char *b){
 
 int main()
 {
-  char *t[] = {"ALMA", "MALAC", "LAZAC", "MAMA"};
+  char *t[] = {"ALMA", "MALAC", "LAZAC", "MAMA", "", "X"};
   int i, j;
   for (i = 0; i < sizeof(t) / sizeof(char *); ++i)
       for (j = 0; j < sizeof(t) / sizeof(char *); ++j)
@@ -33,18 +33,38 @@ int main()
 4
 3
 3
+0
+0
 4
 5
 4
 3
+0
+0
 3
 4
 5
 2
+0
+0
 3
 3
 2
 4
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
 ```
 
 ---
