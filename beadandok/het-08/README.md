@@ -18,7 +18,7 @@ int main()
   int i, j;
   for (i = 0; i < sizeof(t) / sizeof(char *); ++i)
       for (j = 0; j < sizeof(t) / sizeof(char *); ++j)
-          printf("%d\n", get_distinct_count(t[i], t[j]));
+          printf("%d\n", get_equal_count(t[i], t[j]));
     return EXIT_SUCCESS;
 }
 ```
@@ -87,7 +87,7 @@ A fájlokat zárjuk is be olvasás után.
  olvas be mindaddig, amíg a „`THE END`” sztringet nem olvassa!
 
 A programja `s` beolvasását követően a bemenet minden további sorához 
-(a „`THE END`” sztringet tartalmazó sort kivéve) határozza meg és írja a 
+(a „`THEEND`” sztringet tartalmazó sort kivéve) határozza meg és írja a 
 standard kimenetre azt, hogy az éppen beolvasott sztringben az `s` sztring
  mely pozícióktól kezdve fordul elő! 
  
@@ -105,7 +105,7 @@ ablak
 abrakadabra
 kabalababa
 lak
-THE END
+THEEND
 ```
 
 ##### példa kimenet:
