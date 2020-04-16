@@ -413,7 +413,19 @@ Az is valahogy így működik, csak `<>` között adom meg a típust, amit táro
 akarok.
 
 
+Gyakorlásképp próbáljunk meg egyszerűbb adatszerkezeteket a fentebbi módon függvényekre
+bontani és implementálni.
 
+pl:
+  - stack
+  - láncolt lista
+  - sor
+  - bináris fa
+  
+  [kis segítség](https://www.geeksforgeeks.org/data-structures/)
+
+
+Dinamikus memóriakezeléshez további segítség: [link](https://infoc.eet.bme.hu/ea07/#5)
 
 # Tokenizálás
 
