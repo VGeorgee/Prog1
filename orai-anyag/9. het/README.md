@@ -122,7 +122,7 @@ ez pedig nem szűnik meg a függvényből való kilépéskor.
 A `malloc()`-cal lefoglalt területek nem lokális hatáskörbe tartoznak, ők
 akkor szűnnek meg, ha mi töröljük őket.
 
-#### hogyan törölhetek dinamikus területet?
+#### Hogyan törölhetek dinamikus területet?
 Minden dinamikusan foglalt területet a `free()` függvénnyel KELL felszabadítanom,
 mint ahogy azt a fenti példákban nem tettem.
 
@@ -140,12 +140,12 @@ free(ptr);
 
 
 
-#### mi történik, ha nem szabadítom fel a dinamikusan foglalt területet?
+#### Mi történik, ha nem szabadítom fel a dinamikusan foglalt területet?
 Abban az esetben ha `elveszítek` egy dinamikusan foglalt területet,
 többé nem tudom felszabadítani, ő akkor fog megszűnni, ha a programunk teljesen kilép
 és az operációs rendszer minden általunk foglalt területet felszabadít.
 
-#### mit jelent elveszteni egy memóriaterületet?
+#### Mit jelent elveszteni egy memóriaterületet?
 dinamikusan lefoglalok 200 bájtot, őt egy pointerben kell tárolnom,
 ez a pointer megváltoztatható, így felülírom őt:
 
@@ -173,7 +173,7 @@ Van egy végtelen ciklusunk, ami folyamatosan foglalja a memóriát, és mivel
 ugyan azt a pointert írja felül, így a lefoglalt tárhelyet elvesztjük a következő 
 iterációban.
 
-Az két újraindítás után, harmadjára sikerült a képet megörökíteni:
+Két újraindítás után, harmadjára sikerült a képet megörökíteni:
 
 <p align="center">
   <img alt="leak" src="img/LEAK.jpg">
@@ -198,8 +198,10 @@ ugyan azokra az információkra van szükségünk, mint statikus tömbök eseté
  a mi szempontunkból viszont ez nem ennyire egyszerű, hiszen adott számú
  karakternek kevesebb memória kell, mint adott számú egésznek.
  
- Ahhoz, hogy ezt könnyítsük, ismerkedjünk meg a `sizeof()` operátorral,
- melynek paramétere a típus, és azt adja vissza, hogy egy adott típus hány bájt méretű:
+ Ahhoz, hogy ennek a számolását könnyítsük, 
+ ismerkedjünk meg a `sizeof()` operátorral,
+ melynek paramétere a típus, és azt adja vissza, 
+ hogy egy adott típus hány bájt méretű:
  
  ```
 printf("%d\n", sizof(char));
@@ -208,7 +210,8 @@ printf("%d\n", sizof(float));
 printf("%d\n", sizof(double));
 ```
  
- Ezzel fel tudjuk szorozni a darabszámot és számolgatás nélkül meg tudjuk határozni,
+ Ezzel fel tudjuk szorozni a darabszámot és 
+ számolgatás nélkül meg tudjuk határozni,
  hogy mennyi memóriára van szükségünk.
  
  pl:
@@ -223,7 +226,7 @@ ahol `type` a típus, amire szükségünk van, `db` pedig a típusból szükség
 
 
 
-## dinamikus tömb
+## Dinamikus tömb
 Került már elő dinamikus tömb, egyszer jelentette
 azt a tömböt, amit egy változóval hoztunk létre:
 
@@ -233,7 +236,7 @@ int myarray[n]
 ```
 
 valamint jelenti ebben az esetben azt is, hogy egy olyan tömb,
-amihet dinamikusan lett terület csatolva (malloccal).
+ami dinamikus memóriakezeléssel lett létrehozva:
 
 ```
 int *p = malloc(100 * sizeof(int));
@@ -245,9 +248,9 @@ a mérete dinamikusan változik az igényekkel.
 Mivel C-ben ilyen nincs alapból, ezért készítünk egy egyszerűbbet.
 
 Ehhez 3 függvényre lesz szükségünk:
-   - init()  (vele hozunk létre ilyen tömböket)
-   - add()  (az ő segítségével fogunk a létrehozott tömbökbe elemeket pakolni)
-   - get()  (az ő segítségével pedig lekérdezni fogunk elemeket)
+   - `init()`  (vele hozunk létre ilyen tömböket)
+   - `add()` (az ő segítségével fogunk a létrehozott tömbökbe elemeket pakolni)
+   - `get()` (az ő segítségével pedig lekérdezni fogunk elemeket)
 
 
 Egy ilyen tömb kezelésénél szükségünk lesz egy struktúrára,
@@ -261,13 +264,20 @@ typedef struct vsa{
 } VariableSizedArray;
 ```
 
+Az egyes mezők:
+   - `size` A dinamikusan foglalt tömb méretét fogja számon tartani.
+   - `elements` a dinamikusan foglalt tömbben tárolt hasznos adatok számát fogja megadni.
+   - `arr`  maga a dinamikusan foglalt tömb, őt fogjuk cserélgetni igény szerint.
+
+
 ### init()
 Az init függvény csupán egyetlen paraméterrel rendelkezik,
-azzal a minimális mérettel, amit kezdésként szeretnénk a tömbünknek
-megadni.
+egy egész számmal, ami azt adja meg, hogy mekkora legyen
+a mérete a tömbnek. Később alkalmazkodni fog a tömb, ha muszáj, de meghagyjuk a
+lehetőséget, hogy elsőre jól beállítsa a felhasználó.
 
-Visszatérési típusa egy `VariableSizedArray *` típus, mivel dinamikusan hozzuk létre
-a függvényen belül. 
+Visszatérési típusa egy `VariableSizedArray *` típus, azért pointer, mert őt 
+dinamikusan hozzuk létre a függvényen belül.
 
 ```
 VariableSizedArray *init(int n){
@@ -282,18 +292,23 @@ VariableSizedArray *init(int n){
 }
 ```
 
-szükségünk van pontosan 1 darab dinamikusan foglalt `VariableSizedArray`-re,
-ami egy struktúra, az ő mezőit inicializáljuk, kezdetben
-`0` elem van benne, tartozik viszont hozzá egy tömb, amiben az elemeinket
-tároljuk, valamint azt is tudnunk kell, hogy ez a tömb mekkora,
-hogy amikor tele lesz a tömb, újra tudjuk foglalni, 
+A `VariableSizedArray` típust ugyan mutató nélkül is vissza tudnánk adni,
+de bonyolítaná a felhasználását az adatszerkezetnek, ugyanis átadáskor és visszaadáskor
+mindig felül kellene írnunk az eredeti példányt, hogy valós adatokat tartalmazzon,
+valamint így mindig 32 vagy 64 bitet másolunk, nem pointer esetén pedig
+a struktúra méretével történik a másolás, ami ebben az esetben 128 bit.
+
+Inicializáljuk a mezőit a struktúránknak:
+   - 0 hasznos adat van benne
+   - a tömbünk kezdőmérete a paraméter amit megkaptunk
+   - a tömbünket lefoglaljuk dinamikusan, paraméter * sizeof(int) bájt.
 
 
 ### get()
 A `get()` függvény visszatérési típusa egész, hiszen egészeket
 tárolok a tömbömben, első paramétere
 a `VariableSizedArray` pointer, ami egy  `init()`-tel létrehozott 
-területre mutat, a második paramétere az index, amelyik értéket
+területre mutat, a második paramétere az `index`, amelyik értéket
 le akarom kérdezni a tömbből.
 
 Egyetlen dologra kell figyelnem, hogy ne indexelhessem alul, vagy
@@ -316,13 +331,13 @@ a második paramétert hozzáadni, ami magában nem egy nagy művelet:
 
 ```
 void add(VariableSizedArray *vsa, int number){
-    darr->arr[darr->elements] = number;
-    darr->elements++;
+    darr->arr[darr->elements] = number; //felülirom a legutolso elemet
+    darr->elements++; //novelem az elemszamot
 }
 ```
 
-a `VariableSizedArray`-hez tartozó tömb utolsó helyére 
-(ami az `elements` mező) beírom az átadott értéket,
+A `VariableSizedArray`-hez tartozó tömb utolsó helyére 
+(ami a tömb `elements`-edik eleme) beírom az átadott értéket,
 majd ezt az `elements` mezőt növelem 1-el.
 
 Mi ezzel a probléma? létrehozzuk az `init()`-ben a `VariableSizedArray`-hez
@@ -330,13 +345,13 @@ tartozó tömböt az `n` paraméter mérettel, mondjuk `n` legyen 100,
 ebben az esetben amikor a 101. elemet adom a tömbhöz,
 az már kívülindexelés.
  
- hogyan kerülhetem ezt el? Megvizsgálom hozzáadás előtt,
- hogy van-e még elegendő tárhelyem az elem hozzáadásásra 
- (a hozzáadással kifutok-e már a tárhelyből), és ha igen,
+ Hogyan kerülhetem ezt el? Megvizsgálom hozzáadás előtt,
+ hogy van-e még elegendő tárhelyem az elem hozzáadására 
+ (a hozzáadással kifutok-e már a tárhelyből), és ha nincs erre már hely,
  akkor létrehozok egy kétszer akkora tömböt,
- átmásolom ebbe a `VariableSizedArray`-hez tartozó tömböt, 
+ átmásolom ebbe a `VariableSizedArray`-hez tartozó tömb összes elemét, 
  felszabadítom a régi tömböt, és felülírom a `VariableSizedArray`-hez
- tartozó tömb pointert:
+ tartozó tömb pointerét:
  
  ```
 void add(VariableSizedArray *vsa, int number){
@@ -364,9 +379,9 @@ void add(VariableSizedArray *vsa, int number){
 }
 ```
 
-### használat
+### Használat
 
-létrehozok egy `VariableSizedArray`-t 15 mérettel,
+Létrehozok egy `VariableSizedArray`-t 15 mérettel,
 majd belepakolok 1000 elemet, és kiírom őket:
 
 ```
@@ -473,10 +488,11 @@ Ha végigér a sztringen a függvény, akkor `NULL`-t ad vissza.
 int main(){
     char s[] = "a,b,c,d";
 
-    char *token = strtok(s, ",");
+    char *token = strtok(s, ","); //elkezdjuk a tokenizalast
     printf("%s\n", token);
 
-    while((token = strtok(NULL, ","))){
+    while((token = strtok(NULL, ",")) != NULL){
+        //itt meg ugyan azt a sztringet tokenizalom, ezert NULL
         printf("%s\n", token);
     }
 
@@ -531,5 +547,10 @@ int main(){
 Itt használhattam volna `csv` kiterjesztésű fájlt, de `txt`-t egyszerűbb
 létrehozni.
 
-
+file.txt tartalma:
+```
+a,a,a,a,aaaa
+b,bbb,bbbbbbb,b,b,bb
+cccccccccc,cc,c,c,c,c
+```
 
