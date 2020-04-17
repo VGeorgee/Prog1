@@ -84,7 +84,7 @@ Minden sorra meghívja a kereső függvényt,
 a kereső függvény pedig végigmegy a megkapott sztringen,
 és összehasonlítja az indexelt címet az `strstr` függvény eredményével,
 ez a függvény azt a címet adja vissza, ahol az első paraméterben
-először előfordul a második paraméter.
+először előfordul a második paraméter, ha pedig nincs ilyen, akkor `NULL`-t ad vissza
 
 ```
 void searchPattern(char *str, char *pattern){
@@ -141,7 +141,7 @@ int minimumDistances(int *a, int a_count) {
     int min = a_count;
     int i, j;
 
-    for(i = 0; i < a_count - 1; i++){
+    for(i = 0; i < a_count; i++){
         for(j = i + 1; j < a_count; j++){
             if(a[i] == a[j] && (j - i) < min){
                 min = j - i;
@@ -170,7 +170,7 @@ int minimumDistances(int *a, int a_count) {
     int i, j;
 
     for(i = 0; i < a_count; i++){
-        for(j =  1; (j + i) < a_count && j < min ; j++){
+        for(j = 1; (j + i) < a_count && j < min ; j++){
             if(a[i] == a[j + i]){
                 min = j;
                 break;

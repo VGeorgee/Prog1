@@ -1,7 +1,7 @@
 
 # 9. Beadandó
 
-###[Előtte tekintsük meg az előző heti házikat](https://github.com/VGeorgee/Prog1/tree/master/orai-anyag/9.%20het/hazifeladat-megoldasok)
+### [Előtte tekintsük meg az előző heti házikat](https://github.com/VGeorgee/Prog1/tree/master/beadandok/het-09/hazifeladat-megoldasok)
 
 ## 1. feladat
 Írd meg a `get_numbers()` paraméter nélküli függvényt,
