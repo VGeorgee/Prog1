@@ -527,6 +527,11 @@ int main(){
     char s[100];
     FILE *fp = fopen("file.txt", "r");
 
+    if(fp == NULL){
+        puts("nem talalhato fajl!");
+        return 417;
+    }
+
     while(fgets(s, 100, fp) != NULL){
         if(s[strlen(s) - 1] == '\n'){
             s[strlen(s) - 1] = '\0';
