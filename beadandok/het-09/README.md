@@ -62,7 +62,7 @@ adat után is van vessző, az nem baj.
 Ha a fájl nem létezik, akkor a kimenetre a "`Fajl nem talalhato`"
 szöveget írja.
 
-
+A feladatot az `strtok()` függvényt felhasználva kell megoldani.
 
 ##### teszt.txt tartalma:
 ```
