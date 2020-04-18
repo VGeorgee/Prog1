@@ -126,12 +126,18 @@ char *convert(const char *str, char *totype){
 
 }
 
+
 int main()
 {
     char str[50] = "HeLlo";
 
-    char *low = convert(str, "LOWERCASE");
-    char *up = convert(str, "UPPERCASE");
+    char lower[50];
+    strcpy(lower, "LOWERCASE");
+    char upper[50];
+    strcpy(upper, "UPPERCASE");
+
+    char *low = convert(str, lower);
+    char *up = convert(str, upper);
     char *other = convert(str, "some other value");
 
     printf("|%s|\n|%s|\n|%s|\n|%s|\n", str, low, up, other);
@@ -140,6 +146,7 @@ int main()
     free(other);
     return 0;
 }
+
 ```
 
 ##### kimenet:
