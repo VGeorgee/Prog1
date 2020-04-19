@@ -331,8 +331,8 @@ a második paramétert hozzáadni, ami magában nem egy nagy művelet:
 
 ```
 void add(VariableSizedArray *vsa, int number){
-    darr->arr[darr->elements] = number; //felülirom a legutolso elemet
-    darr->elements++; //novelem az elemszamot
+    vsa->arr[vsa->elements] = number; //felülirom a legutolso elemet
+    vsa->elements++; //novelem az elemszamot
 }
 ```
 
