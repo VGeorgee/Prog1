@@ -215,9 +215,9 @@ printf("%d\n", sizof(double));
  hogy mennyi memóriára van szükségünk.
  
  pl:
-   - `malloc(100 * sizeof(char));` 100 karakter lefoglalása
-   - `malloc(1 * sizeof(double));` 1 double lefoglalása
-   - `malloc(250 * sizeof(int));`  250 egész lefoglalása
+   - `malloc(100 * sizeof(char));` 100 karakter lefoglalása (100 bájt)
+   - `malloc(1 * sizeof(double));` 1 double lefoglalása (8 bájt)
+   - `malloc(250 * sizeof(int));`  250 egész lefoglalása (1000 bájt)
  
 Az általános memóriafoglalás kinézete tehát:
 `type *ID = malloc(db * sizeof(type));`
