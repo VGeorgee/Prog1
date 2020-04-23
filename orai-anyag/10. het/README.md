@@ -1,6 +1,7 @@
 
 # Órai anyag
 
+### [Az előző heti házik megoldásait nézzük át](https://github.com/VGeorgee/Prog1/tree/master/orai-anyag/10.%20het/megoldasok)
 
 ## 2 Dimenziós tömbök
 Beszéltünk már a tömbökről, adott típusból több elem egymás mellett,
