@@ -350,8 +350,8 @@ először vegyük azokat a függvényeket, amelyek valamilyen döntést hoznak m
 és egy `igaz`, vagy `hamis` értékkel térnek vissza.
 Ezek mindegyike `is`-el kezdődik, jelezve, hogy ez valamilyen állapotot fog meghatározni.
 
- - `int islower(int c)`  megállapítja, hogy az átadott karakter kisbetű-e ('c' -> igaz,  'C' -> hamis)
- - `int isupper(int c)`  megállapítja, hogy az átadott karakter kisbetű-e ('c' -> hamis,  'C' -> igaz)
+ - `int islower(int c)`  megállapítja, hogy az átadott karakter kisbetű-e (példa: 'c' esetén -> igaz,  'C' -> hamis)
+ - `int isupper(int c)`  megállapítja, hogy az átadott karakter nagybetű-e ('c' -> hamis,  'C' -> igaz)
  - `int isalpha(int c)`  megállapítja, hogy az átadott karakter betű-e ('a' -> igaz, '5' -> hamis)
  - `int isdigit(int c)`  megállapítja, hogy az átadott karakter számjegy-e ('a' -> hamis, '5' -> igaz)
  - `int isalnum(int c)`  megállapítja, hogy az átadott karakter számjegy, vagy betű karakter-e ('a' -> igaz, '5' -> igaz, '.' -> hamis)
