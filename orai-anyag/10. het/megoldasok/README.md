@@ -72,7 +72,7 @@ int main()
 ```
 
 
-### 2. feladat
+### 3. feladat
 Ebben a feladatban a már ismerős `reverse` függvényt kellett megírni.
 Az előző verzió helyben fordította meg a sztringet, ennek viszont
 tilos volt megváltoztatnia a paramétert, így egy dinamikusan
