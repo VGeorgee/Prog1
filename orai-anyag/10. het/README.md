@@ -172,8 +172,8 @@ Bontsuk is szét.
    
   - `void *arr`
   
-  mint láthatjuk, az első paramétere a függvénynek egy pointer, ami void-ra mutat. Mit jelent az,
-  hogy void-ra mutat? Azt, hogy nem tudja, hogy a tömb amit rendez nekünk, miket tartalmaz, de őt nem is érdekli, a többi
+  mint láthatjuk, az első paramétere a függvénynek egy pointer, ami `void`-ra mutat. Mit jelent az,
+  hogy `void`-ra mutat? Azt, hogy nem tudja, hogy a tömb amit rendez nekünk, miket tartalmaz, de őt nem is érdekli, a többi
   paramétertből ennek tudta nélkül is megoldja. Az első paraméter tehát
   a rendezendő tömb kezdőcíme lesz, vagyis a neve.
   
@@ -185,7 +185,7 @@ Ha jobban megnézzük, ez két `size_t` típusú változó. `size_t`? Az meg mic
 vegyük úgy, hogy egy egész szám. Mert az is. Egyébként nem feltétlenül
 ismeretlen, ugyanis az `strlen()` visszatérési típusa is ilyen, ebből
 következtetjük, hogy itt sima inteket is átadhatunk, és így is van.
-A kérdés már csak az, hogy mi az az `elemets` és a `size`?
+A kérdés már csak az, hogy mi az az `elements` és a `size`?
 
 A válasz nagyon egyszerű:
   - `elements` a tömbben található elemek száma (amennyit ebből rendezni akarunk)
@@ -202,7 +202,7 @@ A válasz nagyon egyszerű:
   
   - `int`
   - `(* compare)`
-  - `(const void*, const void*)`
+  - `(const void *a, const void *b)`
   
   Ha a második nem lenne bezárójelezve, akkor összerakva egy függvény definíciót adna ki:
  ` int * compare(const void *a, const void *b)`
@@ -213,7 +213,11 @@ A válasz nagyon egyszerű:
  van ott, ha nem lenne ott, ahogyan írtam, egy int * visszatérésű függvényt jelentene, zárójellel
  viszont inttel visszatérő függvényt jelent, a csillag pedig azért kell, hogy jelezzük, 
  hogy ez cím, vagyis ez a függvény paraméterként lesz átadva. Vajon mit csinál ő?
- Ő fogja összehasonlítani a tömb elemeit.
+ Ő fogja összehasonlítani a tömb elemeit. az `a` és `b` paraméterek
+ a tömb 1-1 eleme, a függvénynek az a dolga, hogy visszaadja ennek a két elemnek a viszonyát:
+   - ha a > b, akkor pozitív számot
+   - ha a < b, akkor negatív számot
+   - ha a == b, akkor nullát
  
  #### paraméterezzünk qsortot
  Vegyük sorban a fentebbi példáinkat.
@@ -286,6 +290,7 @@ int main(){
  ##### sztringek
  Itt egy kicsit egyszerűbb dolgunk lesz, ugyanis
  a sztringek összehasonlítására már ott az `strcmp` függvény.
+ Ez a függvény lexikografikus sorrend szerint adja vissza a két sztring viszonyát.
  
  Hozzunk létre helyet max 20 sztringnek, mindnek legyen legalább 100 karakternek
  helye. Erre 2 dimenziós tömb kell.
@@ -312,4 +317,94 @@ int main(){
 ```
  
  
+ ##### struktúrák
+ A fentebbi példáknál volt egy ilyen struktúra is:
+ ```
+typedef struct ms{
+    int points;
+    char name[20];
+}DATA;
+```
+ Ő tartalmaz egy `int` típusú `points` nevű mezőt, valamint egy `karaktertömb` típusú, `20` méretű `name`
+  nevű mezőt, azt nem tudtuk megmondani, hogy mi a természetes rendezettsége egy ilyen struktúrának, mert most találomki:
+  - pontok szerint növekvő sorrend
+  - ha 2 embernek ugyan annyi a pontszáma, akkor lexikografikus sorrend (ez a nevek abc szerinti rendezettsége)
  
+Az ehhez tartozó rendező algoritmus tehát úgy fog kinézni, hogy `int` típusú, van valami neve is, ez nálam `DATA_cmp`,
+van neki két paramétere, ami az összehasonlítandó típusra mutat, az összehasonlítandó típus `DATA`, tehát
+a két paraméter `DATA *a, DATA *b`, majd az implementáció, ami megnézi, hogy a két szám mezője egyezik-e a két átadott
+elemnek, ha egyeznek, akkor ezekről egyértelműen el tudjuk dönteni a viszonyukat, ez pedig a számok szerinti
+rendezettség fordítottan (hiszen csökkenő kell, a természetes meg a növekvő).
+Ha viszont a két szám egyezik, akkor név szerint kell visszaadnunk az értéket, mivel itt most lexikografikus rendezettség van
+, ezért az strcmp eredményét adjuk vissza.
+
+Létrehozok 100 DATA típust, bekérek valahány darab név + szám sort (EOFig), eltárolom őket
+a tömbömben, majd rendezem őket, aztán kiírom:
+
+```
+typedef struct ms{
+    int points;
+    char name[20];
+}DATA;
+
+int DATA_cmp(DATA *a, DATA *b){
+    if(a->points != b->points){
+        return b->points - a->points;
+    }
+    return strcmp(a->name, b->name);
+}
+
+int main(){
+    int number_of_elements = 0, i;
+    DATA arr[100];
+
+    while(scanf("%s %d", arr[number_of_elements].name, &arr[number_of_elements].points) != EOF){
+        number_of_elements++;
+    }
+
+    qsort(arr, number_of_elements, sizeof(DATA), DATA_cmp);
+
+    puts("RENDEZETT ELEMEK:");
+
+    for(i = 0; i < number_of_elements; i++){
+        printf("name: %10s points: %d\n", arr[i].name, arr[i].points);
+    }
+    return 0;
+}
+```
+
+Ha egynél több szempont szerint kell rendeznünk (az itteni példa ^^^^), akkor lesznek ifek a rendezőfüggvényben,
+ebből teteszőlegesen sok lehet benne (`a rendezési szempontok száma` - 1 darab). Ezek mindig így néznek ki:
+
+```
+    if(a->mezo != b->mezo){
+        return (mezo szerinti rendezettseg);
+    }
+```
+
+a `(mezo szerinti rendezettseg)` hivatkozni fogja a két paramétert, pl:
+
+```
+return *a - *b;
+return strcmp(a->name, b->name)
+return b->points - a->points;
+```
+
+Ha itt fordított sorrendet szeretnénk elérni (lásd pontszám fentebb), akkor erre két lehetőségünk van:
+   - megcseréljük a két összehasonlított elemet:
+```
+return *b - *a;
+return strcmp(b->name, a->name)
+return a->points - b->points;
+```
+
+   - VAGY a `(mezo szerinti rendezettseg)` elé rakunk egy minuszt, megfordítva ezzel a rendezettség eredményét:
+   
+```
+return - (*a - *b);
+return - strcmp(a->name, b->name)
+return - (b->points - a->points);
+```
+
+Ha a két lehetőséget egyszerre játsszuk el (vagyis megfordítjuk a paramétereket ÉS minuszt rakunk elé), akkor
+azzal az eredeti rendezettséget érjük el.
