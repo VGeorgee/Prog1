@@ -29,14 +29,14 @@ amire ZH-n és itt is figyelni kell:
 #### 1
 egyező első sorok [forrás](https://progcont.hu/progcont/100215/?pid=201090)
 
-legrövidebb megoldás: `35` sor
+legrövidebb megoldás: `29` sor
 
 ---
 
 #### 2
 Hegyen-völgyön át [forrás](https://progcont.hu/progcont/100214/?pid=201086)
 
-legrövidebb megoldás: `25` sor
+legrövidebb megoldás: `18` sor
 
 ---
 
@@ -112,7 +112,7 @@ c b, 1:1
 c g, 1:1
 ```
 
-legrövidebb megoldás: `80` sor
+legrövidebb megoldás: `78` sor
 
 
 ---
@@ -128,7 +128,7 @@ legrövidebb megoldás: `40` sor
 #### 5
 különböző betűk [forrás](https://progcont.hu/progcont/100194/?pid=201021)
 
-legrövidebb megoldás: `34` sor
+legrövidebb megoldás: `27` sor
 
 
 ---
@@ -146,7 +146,7 @@ hint: "nem előzi meg"
 #### 7
 szószámlálás [forrás](https://progcont.hu/progcont/100162/?pid=200511)
 
-legrövidebb megoldás: `20` sor
+legrövidebb megoldás: `13` sor
 
 
 ---
