@@ -26,8 +26,8 @@ kimenet:
 minden sor első száma azt határozza meg, hogy abban a sorban még hány darab szám lesz mögötte.
 A program határozza meg minden sorra, hogy a bennük felsorolt számok mindegyike prím-e (a sorban
 szereplő számok darabszámát jelző számot, vagyis az első számot, nem kell belevennie ebben a döntésbe).
-ha a számok mindegyike prím, akkor írja ki csupa nagybetűvel, hogy "YES", 
-ha a számok bármelyike nem prím, akkor írja ki, hogy "NO".
+ha a számok mindegyike prím, akkor írja ki csupa nagybetűvel, hogy "`YES`", 
+ha a számok bármelyike nem prím, akkor írja ki, hogy "`NO`".
 Prímek azok a pozitív egész számok, amelyeknek pontosan két osztója van.
 
 bemenet:
@@ -90,7 +90,10 @@ A program olvassa be ezeket a sorokat, rendezze őket a következő szempontok s
 `lastname` szerint növekvő sorrend
 
 majd írja a kimenetre az összes sort a következő formában:
+```
 firstname lastname
+```
+
 
 A teszteléshez használt fájlban maximum 50 sor van.
 
