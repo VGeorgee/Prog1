@@ -40,10 +40,13 @@ bemenet:
 
 
 kimenet:
-`YES` (5, 7, és 11 mind prímek)
-`NO`  (a 4 nem prím szám)
-`NO`  (a 8 nem prím szám)
-`YES` (a felsorolt számok mindegyike prím)
+```
+YES         (5, 7, és 11 mind prímek)
+NO          (a 4 nem prím szám)
+NO          (a 8 nem prím szám)
+YES         (a felsorolt számok mindegyike prím)
+```
+
 
 
 
